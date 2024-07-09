@@ -23,24 +23,54 @@
 
         /* Estilo para o conteúdo principal */
         .main-content {
-            padding: 40px 20px; /* Espaçamento interno */
-            max-width: 1200px; /* Largura máxima do conteúdo */
+            padding: 20px 10px; /* Espaçamento interno */
+            max-width: 1600px; /* Largura máxima do conteúdo */
             margin: 0 auto; /* Centralizar na página */
         }
 
         /* Estilo para as seções de informações e parceiros */
         .info-section, .partner-section {
             background-color: #1a3549;
-            padding: 20px;
-            border-radius: 10px;
-            margin-bottom: 10px;
+            padding: 10px; 
+            margin-bottom: 20px; 
+        } 
+        .contact-info{
+            margin-bottom: 20px; 
         }
 
         /* Estilo para o título das seções */
         .section-title {
-            color: #fff;
-            margin-bottom: 20px;
-        }
+            color: #fff; 
+            font-size: 30px;
+            margin-bottom: 20px; 
+            border-radius: 10px;
+        } 
+        .info-section_contato {
+            list-style-type: none;
+            padding: 20px; 
+            border-radius: 10px;
+            background-color: #1a3549; 
+} 
+        .SONODA {
+        align-items: center; /* Centraliza verticalmente */ 
+        margin-top: -20px; 
+        
+    }
+
+    .partner-title { 
+        margin-top: -35px;
+        margin-left: 70px; /* Espaçamento à esquerda do título */
+        font-size: 1.5rem; /* Tamanho do título */
+        color: #fcf7f7; /* Cor do texto */
+        font-weight: bold; /* Destaque no texto */ 
+        text-shadow: 2px 2px 4px rgba(0, 0, 255, 0.5); /* Sombra de texto azul */
+    }
+
+    .partner-image {
+        width: 50px; /* Largura da imagem */
+        height: 50px; /* Altura da imagem */
+    }
+
 
         /* Estilo para listas de informações */
         .info-list {
@@ -74,19 +104,19 @@
 
         /* Estilo para o ícone do WhatsApp */
         .whatsapp-icon {
-    cursor: pointer;
-    width: 50px;
-    height: 50px;
-    z-index: 1000;
-    margin-right: 10px; /* Ajuste conforme necessário */
-    position: fixed;
-    bottom: 20px;
-    right: 10px;
-    animation: pulse 1s infinite alternate;
-    border-radius: 50%; /* Bordas arredondadas */
-    overflow: hidden;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Sombra opcional */
-    transform: translateX(5px); /* Deslocamento para a direita */
+        cursor: pointer;
+        width: 50px;
+        height: 50px;
+        z-index: 1000;
+        margin-right: 10px; /* Ajuste conforme necessário */
+        position: fixed;
+        bottom: 20px;
+        right: 10px;
+        animation: pulse 1s infinite alternate;
+        border-radius: 50%; /* Bordas arredondadas */
+        overflow: hidden;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Sombra opcional */
+        transform: translateX(5px); /* Deslocamento para a direita */
 }
 
 .whatsapp-icon img {
@@ -105,7 +135,7 @@
     }
 }
 
-        .whatsapp-icon-container {
+    .whatsapp-icon-container {
     position: fixed;
     bottom: 20px;
     right: 20px;
@@ -275,11 +305,11 @@
             margin-top: 10px; 
         } 
         .eu{
-            max-width: 100px; /* Largura máxima da foto */
+            max-width: 130px; /* Largura máxima da foto */
             border-radius: 50%; /* Arredondamento da borda para formar um círculo */
         } 
         .col-md-9 {
-            margin-bottom: 20px;
+            margin-bottom: 7px;
         }  
         .carousel {
             width: 100%;
@@ -466,7 +496,7 @@
 }   
 .partner-section {
     /* Estilo básico da seção de parceiros */
-    background-color: #347afc;
+    background-color: #313131;
     padding: 2px;
     text-align: center;
     margin-bottom: 5px;
@@ -710,7 +740,100 @@
 
 .plan-button:hover {
     background-color: #45a049;
-} 
+}  
+.plan-button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.plan-button:hover {
+    background-color: #218838;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #1a3549;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.close {
+    color: #f10909;
+    float: right; /* Flutua o elemento para a direita */
+    font-size: 54px;
+    font-weight: bold;
+    position: absolute; /* Posiciona absolutamente em relação ao pai */
+    top: -25px; /* Distância do topo */
+    left: -15px; /* Distância da esquerda */
+}
+
+.close:hover,
+.close:focus {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-content h2 {
+    margin-top: 0;
+    font-size: 24px;
+}
+
+.modal-content label {
+    display: block;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.modal-content input[type="text"],
+.modal-content input[type="tel"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.modal-content button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.modal-content button[type="submit"]:hover {
+    background-color: #0056b3;
+}
 .carousel-item {
             display: none;
         }
@@ -744,7 +867,6 @@
         padding: 0; /* Remove qualquer padding */
         margin: 0; /* Remove qualquer margem */
     }
-       
 
    </style>
 </head>
@@ -834,8 +956,8 @@
                 </div>
 
                 <!-- Seção de Contato -->
-                <div class="info-section">
-                    <h2 class="section-title">Fale com o técnico</h2>
+                <div class="info-section_contato">
+                    <span><h3 class="title">Consultor Sistema de Ponto</h3><br><br></span>
                     <div class="row">
                         <div class="col-md-3">
                             <img class="eu" src="Suporte Interno.png" alt="Suporte Interno" class="eu">
@@ -859,7 +981,11 @@
                                     <img src="icone.png" alt="Copiar telefone" style="width: 20px; height: 20px; margin-right: 5px;">
                                 </span>
                                 <strong id="phone2">(15) 99820-6224</strong><br>
-                            </p>
+                            </p> <br>
+                            <div class="SONODA">
+                                <img src="Sonoda Ponto.ico" alt="" class="partner-image">
+                                <h4 class="partner-title">Parceiro da Sonoda Ponto</h4>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -867,8 +993,10 @@
         </div>
 
         <!-- Seção de Planos -->
+        <!-- Seção de Planos -->
         <div class="row plan-section">
-            <h2 class="section-title">Nossos Planos</h2>
+            <center><h2 class="section-title">Nossos Planos</h2></center>
+        </div>
         <div class="plan-section">
             <!-- Plano Web BASIC -->
             <div class="plan">
@@ -893,7 +1021,7 @@
                     <p>R$ 64,90</p>
                     <p>ATÉ 10 COLABORADORES</p>
                 </div>
-                <button class="plan-button">Quero começar!</button>
+                <button class="plan-button" data-plan="Web BASIC">Quero começar!</button>
             </div>
 
             <!-- Plano Web PRO -->
@@ -919,7 +1047,7 @@
                     <p>R$ 74,90</p>
                     <p>ATÉ 10 COLABORADORES</p>
                 </div>
-                <button class="plan-button">Quero começar!</button>
+                <button class="plan-button" data-plan="Web PRO">Quero começar!</button>
             </div>
 
             <!-- Plano Web ULTIMATE -->
@@ -945,10 +1073,34 @@
                     <p>R$ 104,90</p>
                     <p>ATÉ 10 COLABORADORES</p>
                 </div>
-                <button class="plan-button">Quero começar!</button>
+                <button class="plan-button" data-plan="Web ULTIMATE">Quero começar!</button>
             </div>
         </div>
     </div>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Preencha seus dados</h2>
+            <form id="contactForm">
+                <label for="cnpj">CNPJ ou Razão Social:</label>
+                <input type="text" id="cnpj" name="cnpj" required>
+                
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+                
+                <label for="telefone">Telefone:</label>
+                <input type="tel" id="telefone" name="telefone" required>
+                
+                <input type="hidden" id="planName" name="planName">
+                
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 
         <!-- Seção de Feedback dos Clientes -->
         <body>
@@ -1138,7 +1290,7 @@
 <div class="whatsapp-icon-container" data-toggle="modal" data-target="#contactModal">
     <div class="whatsapp-message-bubble">
         <span class="close-btn">&times;</span>
-        Marque uma apresentação agora!
+        Marque uma apresentação ou suporte de ponto agora!
     </div>
     <div class="whatsapp-icon">
         <img src="Suporte Interno.png" height="60px" width="60" alt="whatsapp">
@@ -1256,7 +1408,57 @@ $(document).ready(function() {
                 var imageUrl = $(this).attr('src');
                 $('#modalImage').attr('src', imageUrl);
             });
-        });
+        }); 
+         
+        document.addEventListener('DOMContentLoaded', function () {
+    var modal = document.getElementById("myModal");
+    var closeModal = document.getElementsByClassName("close")[0];
+    var form = document.getElementById("contactForm");
+    var planNameInput = document.getElementById("planName");
+
+    // Abrir o modal ao clicar em qualquer botão
+    var buttons = document.querySelectorAll(".plan-button");
+    buttons.forEach(button => {
+        button.onclick = function() {
+            planNameInput.value = this.getAttribute('data-plan');
+            modal.style.display = "block";
+        }
+    });
+
+    // Fechar o modal
+    closeModal.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
+    // Enviar os dados para o WhatsApp
+    form.addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        var cnpj = document.getElementById("cnpj").value;
+        var nome = document.getElementById("nome").value;
+        var telefone = document.getElementById("telefone").value;
+        var planName = document.getElementById("planName").value;
+        var message = `
+        Olá! Tudo bem? Estou interessado em saber mais sobre possíveis parcerias com sua empresa. Como posso obter mais informações?\n
+        CNPJ ou Razão Social: ${cnpj}
+        Telefone: ${telefone}
+        Nome: ${nome}
+        Me interessei por esse plano (${planName}), estou deixando meus dados para contato 🙌`;
+
+
+
+        var whatsappUrl = `https://api.whatsapp.com/send?phone=5515997454174&text=${encodeURIComponent(message)}`;
+
+        window.open(whatsappUrl, '_blank');
+    });
+});
+
     
 
 
