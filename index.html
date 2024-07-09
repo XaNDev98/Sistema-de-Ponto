@@ -741,99 +741,14 @@
 .plan-button:hover {
     background-color: #45a049;
 }  
-.plan-button {
-    background-color: #28a745;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    margin-top: 10px;
-    transition: background-color 0.3s;
-}
+
 
 .plan-button:hover {
     background-color: #218838;
 }
 
 /* Modal Styles */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.4);
-}
 
-.modal-content {
-    background-color: #1a3549;
-    margin: 10% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    max-width: 500px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.close {
-    color: #f10909;
-    float: right; /* Flutua o elemento para a direita */
-    font-size: 54px;
-    font-weight: bold;
-    position: absolute; /* Posiciona absolutamente em relação ao pai */
-    top: -25px; /* Distância do topo */
-    left: -15px; /* Distância da esquerda */
-}
-
-.close:hover,
-.close:focus {
-    color: #fff;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.modal-content h2 {
-    margin-top: 0;
-    font-size: 24px;
-}
-
-.modal-content label {
-    display: block;
-    margin-top: 10px;
-    font-size: 16px;
-}
-
-.modal-content input[type="text"],
-.modal-content input[type="tel"] {
-    width: calc(100% - 22px);
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-}
-
-.modal-content button[type="submit"] {
-    background-color: #007bff;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    margin-top: 20px;
-    transition: background-color 0.3s;
-}
-
-.modal-content button[type="submit"]:hover {
-    background-color: #0056b3;
-}
 .carousel-item {
             display: none;
         }
@@ -866,7 +781,106 @@
         border: none; /* Remove a borda */
         padding: 0; /* Remove qualquer padding */
         margin: 0; /* Remove qualquer margem */
-    }
+    } 
+     
+    .custom-modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.custom-modal-content {
+    background-color: #1a3549;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.custom-close {
+    color: #f10909;
+    float: right;
+    font-size: 54px;
+    font-weight: bold;
+    position: absolute;
+    top: -25px;
+    left: -15px;
+}
+
+.custom-close:hover,
+.custom-close:focus {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.custom-modal-content h2 {
+    margin-top: 0;
+    font-size: 24px;
+}
+
+.custom-modal-content label {
+    display: block;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.custom-modal-content input[type="text"],
+.custom-modal-content input[type="tel"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.custom-modal-content button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.custom-modal-content button[type="submit"]:hover {
+    background-color: #0056b3;
+} 
+.modal-body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-container img {
+    margin-right: 5px; /* Espaçamento entre a imagem e o emoji */
+}  
+.logo-container h1 {
+    margin-left: 5px; /* Ajuste a margem conforme necessário */
+}
+.eu_sonoda {
+    border-radius: 100px;
+}
+
+
 
    </style>
 </head>
@@ -1079,23 +1093,24 @@
     </div>
 
     <!-- Modal -->
-    <div id="myModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
+    <div id="customModal" class="custom-modal">
+        <div class="custom-modal-content">
+            <span class="custom-close">&times;</span>
             <h2>Preencha seus dados</h2>
-            <form id="contactForm">
-                <label for="cnpj">CNPJ ou Razão Social:</label>
-                <input type="text" id="cnpj" name="cnpj" required>
+            <form id="customContactForm">
+                <label for="customCnpj">CNPJ ou Razão Social:</label>
+                <input type="text" id="customCnpj" name="customCnpj" required>
                 
-                <label for="nome">Nome:</label>
-                <input type="text" id="nome" name="nome" required>
+                <label for="customNome">Nome:</label>
+                <input type="text" id="customNome" name="customNome" required>
                 
-                <label for="telefone">Telefone:</label>
-                <input type="tel" id="telefone" name="telefone" required>
+                <label for="customTelefone">Telefone:</label>
+                <input type="tel" id="customTelefone" name="customTelefone" required>
                 
-                <input type="hidden" id="planName" name="planName">
+                <input type="hidden" id="customPlanName" name="customPlanName">
                 
-                <button type="submit">Enviar</button>
+                <button type="submit">Enviar</button> 
+                <button type="button" class="btn btn-secondary" onclick="fecharModal()">Cancelar</button>
             </form>
         </div>
     </div>
@@ -1184,13 +1199,17 @@
                 <div class="modal fade" id="imageModal" tabindex="-1" role="dialog" aria-labelledby="imageModalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered modal-lg">
                         <div class="modal-content">
-                            <div class="modal-body">
-                                <img src="" class="img-fluid mx-auto d-block" id="modalImage" alt="Imagem Ampliada">
-                                <button type="button" class="btn btn-secondary btn-lg btn-block mt-2" data-dismiss="modal">Fechar</button>
+                            <div class="modal-body text-center">
+                                <div class="position-relative">
+                                    <img src="" class="img-fluid mx-auto d-block" id="modalImage" alt="Imagem Ampliada">
+                                    <button type="button" class="btn btn-secondary position-absolute bottom-0 start-50 translate-middle-x" data-dismiss="modal">Fechar</button>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                
+                
            
         
 
@@ -1199,25 +1218,25 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Sua cotação em poucos minutos 😍</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Solicite sua apresentação 😍 ou Suporte 😉</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <div class="modal-body"> 
-                <h5>Dados Necessários:</h5><br>
-                <h6>Nome:</h6>
-                <h6>Numero para contato:</h6> 
-                <h6>E-mail:</h6> 
-                <h6>CNPJ:</h6>
-            </div>
+            <div class="modal-body">
+                <img src="Sonoda Ponto.ico" height="100px" width="100px" alt="">
+                <h1>🤝</h1>
+                <img class="eu_sonoda" src="Suporte Interno.png" height="100px" width="100px" alt="">
+            </div>            
             <div class="modal-footer">
-                <a id="whatsapp-link" class="btn btn-success" href="#" onclick="openWhatsApp()">Abrir WhatsApp</a>
+                <a id="whatsapp-link" class="btn btn-success" href="#" onclick="sendWhatsAppMessage()">Abrir WhatsApp</a>
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
             </div>
         </div>
     </div>
 </div>
+
+
 
 <!-- Footer -->
 <footer class="bg-dark text-white text-center py-3">
@@ -1308,9 +1327,31 @@
 
 <script>
     function openWhatsApp() {
-        let phoneNumber = "+5515997454174"; // Substitua pelo número desejado
-        window.open(`https://wa.me/${phoneNumber}`, '_blank');
+            let phoneNumber = "+5515997454174"; // Substitua pelo número desejado
+            window.open(`https://wa.me/${phoneNumber}`, '_blank');
+        }
+
+        $(document).ready(function() {
+            // Fechar a mensagem de bolha do WhatsApp ao clicar no X
+            $('.close-btn').on('click', function() {
+                $('.whatsapp-message-bubble').hide();
+            });
+        }); 
+      
+    function sendWhatsAppMessage() {
+        var message = "Olá! gostaria de agendar um atendimento. 👍";
+
+        // Número de telefone para o qual você deseja enviar a mensagem via WhatsApp
+        var phoneNumber = "5515997454174";
+
+        // Constrói a URL do WhatsApp com o número e a mensagem
+        var whatsappUrl = "https://api.whatsapp.com/send?phone=" + phoneNumber + "&text=" + encodeURIComponent(message);
+
+        // Abre a URL em uma nova aba
+        window.open(whatsappUrl, '_blank');
     }
+
+
 
     function copyText(type) {
         let textToCopy = '';
@@ -1411,10 +1452,10 @@ $(document).ready(function() {
         }); 
          
         document.addEventListener('DOMContentLoaded', function () {
-    var modal = document.getElementById("myModal");
-    var closeModal = document.getElementsByClassName("close")[0];
-    var form = document.getElementById("contactForm");
-    var planNameInput = document.getElementById("planName");
+    var modal = document.getElementById("customModal");
+    var closeModal = document.querySelector(".custom-close");
+    var form = document.getElementById("customContactForm");
+    var planNameInput = document.getElementById("customPlanName");
 
     // Abrir o modal ao clicar em qualquer botão
     var buttons = document.querySelectorAll(".plan-button");
@@ -1440,10 +1481,10 @@ $(document).ready(function() {
     form.addEventListener("submit", function(event) {
         event.preventDefault();
 
-        var cnpj = document.getElementById("cnpj").value;
-        var nome = document.getElementById("nome").value;
-        var telefone = document.getElementById("telefone").value;
-        var planName = document.getElementById("planName").value;
+        var cnpj = document.getElementById("customCnpj").value;
+        var nome = document.getElementById("customNome").value;
+        var telefone = document.getElementById("customTelefone").value;
+        var planName = document.getElementById("customPlanName").value;
         var message = `
         Olá! Tudo bem? Estou interessado em saber mais sobre possíveis parcerias com sua empresa. Como posso obter mais informações?\n
         CNPJ ou Razão Social: ${cnpj}
@@ -1451,13 +1492,19 @@ $(document).ready(function() {
         Nome: ${nome}
         Me interessei por esse plano (${planName}), estou deixando meus dados para contato 🙌`;
 
-
-
         var whatsappUrl = `https://api.whatsapp.com/send?phone=5515997454174&text=${encodeURIComponent(message)}`;
 
         window.open(whatsappUrl, '_blank');
+        
+        // Fechar o modal após enviar para o WhatsApp
+        modal.style.display = "none";
     });
-});
+}); 
+function fecharModal() {
+    var modal = document.getElementById("customModal");
+    modal.style.display = "none";
+}
+
 
     
 
