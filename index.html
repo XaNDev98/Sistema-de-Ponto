@@ -915,6 +915,45 @@
     }
 }
 
+.video-container {
+    text-align: center;
+    margin: 20px 0; /* Margem superior e inferior */
+}
+
+.video {
+    display: inline-block;
+    padding: 10px; /* Adiciona espaço ao redor do vídeo */
+    border: 2px solid #5c5c5c; /* Borda ao redor do vídeo */
+    border-radius: 10px; /* Borda arredondada */
+    background-color: #112941; /* Cor de fundo para o contêiner do vídeo */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para o contêiner do vídeo */ 
+    margin-top: -50px;
+}
+
+.video video {
+    width: 100%;
+    max-width: 300px; /* Ajuste a largura conforme necessário */
+    height: auto;
+    border-radius: 10px; /* Borda arredondada do vídeo */
+}
+
+.video-title { 
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px;
+    margin-bottom: 20px; /* Espaço entre o título e o vídeo */
+    text-align: center;
+}  
+.centered-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%; /* Ajuste a altura conforme necessário */ 
+    left: 25%; 
+    top: 170px; 
+    font-family: Verdana, Geneva, Tahoma, sans-serif; 
+    font-size: 16px;
+}
 
 
 
@@ -967,13 +1006,30 @@
             <li class="carousel-indicator" data-slide-to="2"></li>
         </ul>
     </div> 
+     
+   
     
-    
-    
+      <!-- Texto Centralizado -->
+      <div class="col-md-6 centered-text">
+        <strong><p>Pequena demonstração dos nossos sistemas,<br> 
+            Secullum offline e Secullum Web Ultimate  <br></p></strong> 
+    </div>
+
 
     <div class="container main-content">
         <div class="row">
             <div class="col-md-6">
+                <!-- Vídeo acima da seção de Informações -->
+                <div class="video-container">
+                    <div class="video">
+                        <h3 class="video-title">Sim Web</h3>
+                        <video controls>
+                            <source src="video1.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+
                 <!-- Seção de Informações -->
                 <div class="info-section">
                     <h2 class="section-title">Informações</h2>
@@ -992,6 +1048,20 @@
                 </div>
             </div>
             <div class="col-md-6">
+                <!-- Vídeo acima da seção de Parcerias -->
+                <div class="video-container">
+                    <div class="video">
+                        <h3 class="video-title">Sistema Off</h3>
+                        <video controls>
+                            <source src="video2.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+
+               
+
+                <!-- Seção de Parcerias -->
                 <div class="partner-section">
                     <h2 class="section-title">Nossas Parcerias</h2>
                     <div class="partner-logos">
@@ -1003,7 +1073,6 @@
                         <img src="Pole.png" alt="Desincha" class="partner-logo partner-logo-notebook">
                     </div>
                 </div>
-                
 
                 <!-- Seção de Contato -->
                 <div class="info-section_contato">
@@ -1041,6 +1110,7 @@
                 </div>
             </div>
         </div>
+    </div>
 
         <!-- Seção de Planos -->
         <!-- Seção de Planos -->
