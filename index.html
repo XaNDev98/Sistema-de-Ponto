@@ -923,11 +923,11 @@
 .video {
     display: inline-block;
     padding: 10px; /* Adiciona espaço ao redor do vídeo */
-    border: 2px solid #5c5c5c; /* Borda ao redor do vídeo */
     border-radius: 10px; /* Borda arredondada */
     background-color: #112941; /* Cor de fundo para o contêiner do vídeo */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para o contêiner do vídeo */ 
-    margin-top: -50px;
+    margin-top: -150px; 
+    height: 100px;
 }
 
 .video video {
@@ -948,12 +948,108 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    height: 100%; /* Ajuste a altura conforme necessário */ 
+    height: 100%; /* Ajuste a altura conforme necessário */
     left: 25%; 
-    top: 170px; 
-    font-family: Verdana, Geneva, Tahoma, sans-serif; 
-    font-size: 14px;
+    top: 50px; 
+    font-size: 18px; /* Aumente o tamanho da fonte */
+    font-family: 'Georgia', serif; /* Escolha uma fonte elegante */
+    font-weight: bold; /* Deixe o texto em negrito */
+    color: #15b9d6; /* Cor do texto */
+    padding: 20px; /* Espaçamento interno */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+} 
+/* Tamanho de fonte menor para telas menores que 1400px */
+@media (max-width: 1400px) {
+    .centered-text h6 {
+        font-size: 12px;
+    }
 }
+
+/* Tamanho de fonte menor para telas menores que 809px */
+@media (max-width: 809px) {
+    .centered-text h6 {
+        font-size: 14px;
+    }
+}
+
+/* Tamanho de fonte menor para telas menores que 768px */
+@media (min-width: 480px) and (max-width: 768px) {
+    .centered-text h6 {
+        font-size: 8px;
+    } 
+    .video { 
+    border: none; 
+    display: inline-block;
+    padding: 10px; /* Adiciona espaço ao redor do vídeo */
+    border: none;
+    border-radius: 10px; /* Borda arredondada */
+    background-color: #112941; /* Cor de fundo para o contêiner do vídeo */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para o contêiner do vídeo */ 
+    margin-top: -150px; 
+    width: 150px; 
+    font-size: 10px; 
+}
+}
+
+/* Tamanho de fonte menor para telas menores que 480px */
+@media (max-width: 480px) {
+    .centered-text h6 {
+        font-size: 10px; 
+        margin-left: -220px; /* Move o texto para a esquerda */
+    } 
+    .video video {
+        display: none; /* Torna o vídeo invisível em telas menores */
+    } 
+
+} 
+@media (min-width: 768px) and (max-width: 1024px) {
+    .centered-text h6 {
+        font-size: 12px;
+    } 
+    .video { 
+    border: none; 
+    display: inline-block;
+    padding: 10px; /* Adiciona espaço ao redor do vídeo */
+    border: none;
+    border-radius: 10px; /* Borda arredondada */
+    background-color: #112941; /* Cor de fundo para o contêiner do vídeo */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para o contêiner do vídeo */ 
+    margin-top: -150px; 
+    width: 250px; 
+    font-size: 10px; 
+} 
+.col-md-9 {
+    font-size: 10px;
+} 
+.eu {
+    width: 100px;
+}
+} 
+@media (min-width: 878px) and (max-width: 1053pppx) {
+    .centered-text h6 {
+        font-size: 2px;
+    } 
+    .video { 
+    border: none; 
+    display: inline-block;
+    padding: 10px; /* Adiciona espaço ao redor do vídeo */
+    border: none;
+    border-radius: 10px; /* Borda arredondada */
+    background-color: #112941; /* Cor de fundo para o contêiner do vídeo */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para o contêiner do vídeo */ 
+    margin-top: -150px; 
+    width: 250px; 
+    font-size: 10px; 
+} 
+.col-md-9 {
+    font-size: 10px;
+} 
+.eu {
+    width: 100px;
+}
+}
+
 
 
 
@@ -1011,8 +1107,12 @@
     
       <!-- Texto Centralizado -->
       <div class="col-md-6 centered-text">
-        <strong><p>Pequena demonstração dos nossos sistemas,<br> 
-            Secullum offline e Secullum Web Ultimate  <br></p></strong> 
+        <strong><h6>Pequena demonstração dos nossos sistemas</h6> 
+             <b><h6>SECULLUM OFFLINE e SECULLUM WEB ULTIMATE</h6></b>
+            <hr> 
+            <h6>Interessado em consulta no seu sistema?</h6> 
+            <h6>Ou em um cotação? Entre em contato</h6>
+             </strong> 
     </div>
 
 
@@ -1022,13 +1122,16 @@
                 <!-- Vídeo acima da seção de Informações -->
                 <div class="video-container">
                     <div class="video">
-                        <h3 class="video-title">Sim Web</h3>
+                        <h3 class="video-title">Sistema Web</h3>
                         <video controls>
-                            <source src="video1.mp4" type="video/mp4">
+                            <source src="Secullum Ponto Web _ Controle de Ponto Eletrônico Online.mp4" type="video/mp4">
                             Your browser does not support the video tag.
-                        </video>
-                    </div>
-                </div>
+                        </video> 
+                    </div> 
+                    
+
+                </div> 
+         
 
                 <!-- Seção de Informações -->
                 <div class="info-section">
@@ -1053,7 +1156,7 @@
                     <div class="video">
                         <h3 class="video-title">Sistema Off</h3>
                         <video controls>
-                            <source src="video2.mp4" type="video/mp4">
+                            <source src="Planos Secullum Ponto _ Temos o plano perfeito para sua empresa.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
                     </div>
@@ -1112,7 +1215,7 @@
         </div>
     </div>
 
-        <!-- Seção de Planos -->
+   
         <!-- Seção de Planos -->
         <div class="row plan-section">
             <center><h2 class="section-title">Nossos Planos</h2></center>
