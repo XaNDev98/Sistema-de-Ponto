@@ -878,7 +878,43 @@
 }
 .eu_sonoda {
     border-radius: 100px;
+} 
+.partner-logo-notebook {
+    max-width: 95.5px; /* Defina a largura máxima desejada para as imagens */
+    height: auto; /* Mantém a proporção da imagem */
+} 
+.partner-logos {
+    display: flex;
+    justify-content: center; /* Centraliza os logos horizontalmente */
+    align-items: center; /* Centraliza os logos verticalmente */
+    flex-wrap: wrap; /* Permite que os logos quebrem para a próxima linha */
 }
+
+.partner-logo {
+    width: 10em; /* Ajuste conforme necessário para o tamanho dos logos */
+    height: auto; /* Mantém a proporção da imagem */
+    margin: 10px; /* Espaçamento entre os logos (ajuste conforme necessário) */
+}
+
+/* Media query para telas menores */
+@media (max-width: 768px) {
+    .partner-logo {
+        width: 50%; /* Ajusta o tamanho dos logos para 50% da largura do contêiner pai */
+    }
+}
+
+/* Media query para telas muito pequenas, como smartphones em modo retrato */
+@media (max-width: 480px) {
+    .partner-logo {
+        width: 100%; /* Ajusta o tamanho dos logos para ocupar toda a largura disponível */
+    }
+} 
+@media (min-width: 769px) and (max-width: 1024px) {
+    .partner-logo {
+        width: 100%; /* Ajusta o tamanho dos logos para ocupar toda a largura disponível */
+    }
+}
+
 
 
 
@@ -956,18 +992,18 @@
                 </div>
             </div>
             <div class="col-md-6">
-                <!-- Seção de Parceiros -->
                 <div class="partner-section">
                     <h2 class="section-title">Nossas Parcerias</h2>
                     <div class="partner-logos">
-                        <img src="GDBR.png" alt="gdbr" class="partner-logo">
-                        <img src="Soneda.png" alt="Soneda" class="partner-logo">
-                        <img src="Florestana.png" alt="Logcomex" class="partner-logo">
-                        <img src="Graal.png" alt="Simple Organic" class="partner-logo">
-                        <img src="Seara.png" alt="Desincha" class="partner-logo"> 
-                        <img src="Pole.png" alt="Desincha" class="partner-logo">
+                        <img src="GDBR.png" alt="gdbr" class="partner-logo partner-logo-notebook">
+                        <img src="Soneda.png" alt="Soneda" class="partner-logo partner-logo-notebook">
+                        <img src="Florestana.png" alt="Logcomex" class="partner-logo partner-logo-notebook">
+                        <img src="Graal.png" alt="Simple Organic" class="partner-logo partner-logo-notebook">
+                        <img src="Seara.png" alt="Desincha" class="partner-logo partner-logo-notebook">
+                        <img src="Pole.png" alt="Desincha" class="partner-logo partner-logo-notebook">
                     </div>
                 </div>
+                
 
                 <!-- Seção de Contato -->
                 <div class="info-section_contato">
