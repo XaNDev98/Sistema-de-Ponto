@@ -274,7 +274,7 @@
             left: 50%; /* Move o footer para a direita */ 
             margin-left: -50vw; /* Reposiciona o footer para a esquerda */
             text-align: center;
-            margin-top: 65px; /* Margem acima do conteúdo */ 
+            margin-top: 150px; /* Margem acima do conteúdo */ 
             margin-bottom: 0; /* Remove a margem na parte de baixo */
         } 
         .content {
@@ -894,7 +894,19 @@
     width: 10em; /* Ajuste conforme necessário para o tamanho dos logos */
     height: auto; /* Mantém a proporção da imagem */
     margin: 10px; /* Espaçamento entre os logos (ajuste conforme necessário) */
+} 
+.secullumLogo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: -160px; 
+    margin-top: 20px;
 }
+
+.secullumLogo img {
+    height: 150px; /* Ajuste o tamanho conforme necessário */
+}
+
 
 /* Media query para telas menores */
 @media (max-width: 768px) {
@@ -957,19 +969,33 @@
     border-radius: 10px; /* Bordas arredondadas */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
 } 
-/* Tamanho de fonte menor para telas menores que 1400px */
+/* Tamanho de fonte menor para telas menores que 1400px */ 
+@media (max-width: 1920px) {
+    .partner-logo {
+    margin-bottom: 16px;
+} 
+.video video {
+    width: 100%;
+    max-width: 450px; /* Ajuste a largura conforme necessário */
+    height: auto;
+    border-radius: 10px; /* Borda arredondada do vídeo */
+}
+}
 @media (max-width: 1400px) {
     .centered-text h6 {
         font-size: 12px;
     } 
     .video_planos {
-    width: 450px; 
+    width: 650px; 
     height: 350px; 
     padding-left: 25px;  
     justify-content: center;
     align-items: center; 
-    margin-left: 20%; 
     margin-bottom: 15px;
+} 
+.partner-logo {
+    width: 91.3px; 
+    margin-bottom: 20px;
 }
 }
 
@@ -1106,7 +1132,6 @@
     width: 100px;
 }  
 
-
 } 
 
    </style>
@@ -1158,7 +1183,7 @@
             <li class="carousel-indicator" data-slide-to="2"></li>
         </ul>
     </div> 
-     
+    
    
     
       <!-- Texto Centralizado -->
@@ -1170,7 +1195,7 @@
             <h6>Ou em um cotação? Entre em contato</h6>
              </strong> 
     </div>
--->
+--> 
 
     
     <div class="container main-content">
@@ -1507,7 +1532,9 @@
     </div>
 </div>
 
-
+<div class="secullumLogo">
+    
+</div>
 
 <!-- Footer -->
 <footer class="bg-dark text-white text-center py-3">
@@ -1515,7 +1542,7 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="footer-logo">
-                    <img src="Sonoda Ponto.ico" alt="Logo Sonoda" class="footer-logo">
+                    <img src="Sonoda Ponto.ico" alt="Logo Sonoda" class="footer-logo"> 
                 </div>
                 <div class="footer-text">
                     <p><strong>Sonoda Gestão do Ponto e Acesso</strong></p>
@@ -1559,13 +1586,14 @@
                                     <a href="https://sonodaponto.com.br/ponto-web-secullum/?utm_source=google&utm_campaign=17424627277&utm_term=aplicativo%20de%20ponto&gad_source=1&gclid=Cj0KCQjwj9-zBhDyARIsAERjds2sc5NK_rg8RlWjzs1SrE7hZ3jcLiRBs83HTPgVPI5tGmP9-bSr6OkaAo_aEALw_wcB" target="_blank">Sonoda Ponto</a> 
                                 </p>
                                 <p style="display: flex; align-items: center;">
-                                    <img src="correspondencia.png" width="20px" height="20px" alt="" style="margin-right: 5px;"> <!-- Espaço ajustado aqui -->
-                                    Alexandre.mastrandea@sonodaponto.com.br
-                                </p> 
-                                <p style="display: flex; align-items: center;">
-                                    <img src="correspondencia.png" width="20px" height="20px" alt="" style="margin-right: 5px;"> <!-- Espaço ajustado aqui -->
-                                    Tamara.raunaimer@sonodaponto.com.br
+                                    <img src="correspondencia.png" width="20px" height="20px" alt="" style="margin-right: 5px;"> 
+                                    <a href="mailto:Alexandre.mastrandea@sonodaponto.com.br">Alexandre.mastrandea@sonodaponto.com.br</a>
                                 </p>
+                                <p style="display: flex; align-items: center;">
+                                    <img src="correspondencia.png" width="20px" height="20px" alt="" style="margin-right: 5px;"> 
+                                    <a href="mailto:Tamara.raunaimer@sonodaponto.com.br">Tamara.raunaimer@sonodaponto.com.br</a>
+                                </p>
+                                
                             </div>
                         </div>
                     </div>
