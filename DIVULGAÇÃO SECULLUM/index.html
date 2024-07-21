@@ -894,7 +894,19 @@
     width: 10em; /* Ajuste conforme necessário para o tamanho dos logos */
     height: auto; /* Mantém a proporção da imagem */
     margin: 10px; /* Espaçamento entre os logos (ajuste conforme necessário) */
+} 
+.secullumLogo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: -160px; 
+    margin-top: 20px;
 }
+
+.secullumLogo img {
+    height: 150px; /* Ajuste o tamanho conforme necessário */
+}
+
 
 /* Media query para telas menores */
 @media (max-width: 768px) {
@@ -961,6 +973,12 @@
 @media (max-width: 1920px) {
     .partner-logo {
     margin-bottom: 16px;
+} 
+.video video {
+    width: 100%;
+    max-width: 450px; /* Ajuste a largura conforme necessário */
+    height: auto;
+    border-radius: 10px; /* Borda arredondada do vídeo */
 }
 }
 @media (max-width: 1400px) {
@@ -1166,7 +1184,7 @@
             <li class="carousel-indicator" data-slide-to="2"></li>
         </ul>
     </div> 
-     
+    
    
     
       <!-- Texto Centralizado -->
@@ -1178,7 +1196,7 @@
             <h6>Ou em um cotação? Entre em contato</h6>
              </strong> 
     </div>
--->
+--> 
 
     
     <div class="container main-content">
@@ -1515,7 +1533,9 @@
     </div>
 </div>
 
-
+<div class="secullumLogo">
+    
+</div>
 
 <!-- Footer -->
 <footer class="bg-dark text-white text-center py-3">
@@ -1523,7 +1543,7 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="footer-logo">
-                    <img src="Sonoda Ponto.ico" alt="Logo Sonoda" class="footer-logo">
+                    <img src="Sonoda Ponto.ico" alt="Logo Sonoda" class="footer-logo"> 
                 </div>
                 <div class="footer-text">
                     <p><strong>Sonoda Gestão do Ponto e Acesso</strong></p>
